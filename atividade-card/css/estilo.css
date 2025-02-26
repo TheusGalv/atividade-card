@@ -1,0 +1,147 @@
+ :root{--silver: #c0c2c0ff;
+    --eerie-black: #202427ff;
+    --rich-black: #050a0fff;
+    --rich-black-2: #171d28ff;
+    --teal: #278082ff;
+    --rich-black-3: #12161dff;
+    --gunmetal: #2b2f33ff;
+    --caf-noir: #51321bff;
+    --dim-gray: #5d6367ff;
+    --rich-black-4: #0b111dff;
+}
+
+@font-face {
+    font-family: king;
+    src: url(/imagem/KingsguardCalligraphy_PERSONAL_USE_ONLY.otf);
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--rich-black);
+
+
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    background: var(--silver);
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px var(--teal);
+    transition: 0.5s;
+
+}
+
+.central:hover {
+
+    width: 450px;
+    height: 600px;
+
+
+
+}
+
+.central .img-box {
+
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5s;
+
+}
+
+
+.central:hover .img-box {
+
+    top: -50px;
+    scale: 0.75;
+
+
+}
+
+.central .img-box img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    border-radius: 50%;
+
+
+}
+
+.central .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+
+
+}
+
+hr {
+    height: 20px;
+    background: var(--teal);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+
+    width: 100%;
+
+}
+
+.central:hover .content {
+
+    top: 185px;
+    height: 450px;
+
+
+}
+
+.central .nome {
+
+    font-family: king;
+
+}
+
+
+@media(max-width: 1024px) and (min-width: 720px) {
+    body {
+
+        background: var(--dim-gray);
+
+    }
+}
+
+@media (max-width: 720px) {
+
+    body {
+
+        background: var(--caf-noir);
+
+
+    }
+
+
+}
